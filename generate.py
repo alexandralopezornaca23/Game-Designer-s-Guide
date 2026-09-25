@@ -35,15 +35,15 @@ PRESERVE = {"assets"}
 
 # Sheet name -> (display name, blurb). Order here is the order in the site.
 PROGRAMS = OrderedDict([
-    ("Blender",              ("Blender",       "Modelling, sculpting, UVs, nodes and animation.")),
-    ("ZBrush",               ("ZBrush",        "Digital sculpting: all 25 top-menu palettes, control by control.")),
-    ("Maya",                 ("Maya",          "Modelling and animation.")),
-    ("Krita",                ("Krita",         "Digital painting, textures and 2D art.")),
-    ("Photoshop",            ("Photoshop",     "Retouching and textures.")),
-    ("Illustrator",          ("Illustrator",   "Vectors and UI art.")),
-    ("Unity",                ("Unity",         "Game engine.")),
-    ("Unreal Engine",        ("Unreal Engine", "Game engine.")),
-    ("PureRef",              ("PureRef",       "Reference image boards.")),
+    ("Blender",              ("Blender",       "Full interface: modelling, sculpting, UVs, nodes and animation.")),
+    ("ZBrush",               ("ZBrush",        "Full interface: all 25 top-menu palettes, control by control.")),
+    ("Maya",                 ("Maya",          "Modelling and animation. Shortcuts and essentials; full interface pending.")),
+    ("Krita",                ("Krita",         "Digital painting, textures and 2D art. In progress.")),
+    ("Photoshop",            ("Photoshop",     "Retouching and textures. Shortcuts and essentials; full interface pending.")),
+    ("Illustrator",          ("Illustrator",   "Vectors and UI art. Shortcuts and essentials; full interface pending.")),
+    ("Unity",                ("Unity",         "Game engine. Shortcuts and essentials; full interface pending.")),
+    ("Unreal Engine",        ("Unreal Engine", "Game engine. Shortcuts and essentials; full interface pending.")),
+    ("PureRef",              ("PureRef",       "Reference image boards. Shortcuts and board handling.")),
     ("💡 Consejos Generales", ("General Tips",  "Workflow, organisation and portfolio practices.")),
     ("Python",               ("Python",        "Scripts for Blender (bpy) and Maya (maya.cmds).")),
     ("MEL",                  ("MEL",           "Scripts in Maya's native language.")),
@@ -151,8 +151,8 @@ site_name: Game Art Tools Reference
 site_description: >-
   Shortcuts, tools and interface reference for Blender, ZBrush, Maya, Krita,
   Unity, Unreal Engine and more — searchable across every program at once.
-site_author: Alex
-copyright: © Alex · Game Design & Development
+site_author: Alexandra López Ornaca
+copyright: © Alexandra López Ornaca · Content CC BY 4.0
 
 theme:
   name: material
@@ -456,6 +456,13 @@ def main():
         "It is the same *docs-as-code* approach studios use to document tools and "
         "pipelines: one source of truth, everything else generated.\n",
         "```\nGameDesignerGuide.xlsx  ──►  generate.py  ──►  docs/*.md  ──►  mkdocs build  ──►  site/\n```\n",
+        "## Status\n",
+        "This is an ongoing project, not a finished one.\n",
+        "**Blender and ZBrush are done** — presentable as they stand, though I expect "
+        "to keep adding to them whenever working on something turns up a gap.\n",
+        "**Krita is in progress.** Maya, Photoshop, Illustrator, Unity and Unreal "
+        "Engine currently cover shortcuts and essentials only; their full interfaces "
+        "are still ahead. 3ds Max and Marmoset Toolbag are planned but not started.\n",
         "## Conventions\n",
         "- **Level** — Basic, Intermediate or Advanced, so you can tell everyday "
         "tools from once-a-month ones.\n"
