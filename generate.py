@@ -29,6 +29,10 @@ FIRST_DATA_ROW = 4
 # Sheets that are navigation or spreadsheet plumbing, not content.
 SKIP_SHEETS = {"📌 Índice", "➕ Plantilla", "Listas"}
 
+# Entries in docs/ that are written by hand and must survive regeneration:
+# the stylesheet, the favicon and the screenshots all live in docs/assets/.
+PRESERVE = {"assets"}
+
 # Sheet name -> (display name, blurb). Order here is the order in the site.
 PROGRAMS = OrderedDict([
     ("Blender",              ("Blender",       "Modelling, sculpting, UVs, nodes and animation.")),
@@ -344,9 +348,16 @@ def main():
         sys.exit(f"Spreadsheet not found: {XLSX}")
 
     wb = openpyxl.load_workbook(XLSX, data_only=True)
-    if os.path.isdir(DOCS):
-        shutil.rmtree(DOCS)
-    os.makedirs(DOCS)
+
+    # docs/ is rebuilt from scratch on every run so that removing a category
+    # from the spreadsheet really removes its page. Everything in PRESERVE is
+    # hand-maintained and must survive that wipe.
+    os.makedirs(DOCS, exist_ok=True)
+    for entry in os.listdir(DOCS):
+        if entry in PRESERVE:
+            continue
+        target = os.path.join(DOCS, entry)
+        shutil.rmtree(target) if os.path.isdir(target) else os.remove(target)
 
     nav, summary, total = [], [], 0
 
@@ -415,6 +426,22 @@ def main():
         "    Use the **search box** at the top (or press <kbd>S</kbd>): it searches "
         "every program at once, which is the one thing a spreadsheet cannot do. If "
         "you already know where to look, pick the program from the tabs.\n",
+        "## Why this exists\n",
+        "I started this spreadsheet for myself, as notes taken during my classes at "
+        "university. It outgrew that quickly: what I was writing down was going to be "
+        "just as useful to my classmates and to the people around me working in this "
+        "field, so I kept going and built it into something I could actually hand to "
+        "someone else.\n",
+        "Then I found out that large studios keep their own internal wikis for exactly "
+        "this kind of knowledge, and that changed what the project was. My goal is to "
+        "found my own game studio, and this is a first version of the documentation I "
+        "would want that studio to have. It is also why it stopped being a "
+        "spreadsheet: a site can be shared, searched and eventually contributed to.\n",
+        "**One row per slider, not one per tool.** I wanted a record of every function "
+        "in every program, each tool, each button, each slider, so that the answer to "
+        "*\"if I ever need this, how am I supposed to use it?\"* is already written "
+        f"down before I need it. It is why there are {format(total, ',')} entries "
+        "instead of a few hundred, and why the number keeps growing.\n",
         "## The programs\n",
         "\n| Program | Entries | Categories | What it covers |", "|---|---:|---:|---|",
     ]

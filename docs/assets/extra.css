@@ -1,0 +1,28 @@
+/* Hand-maintained. Not generated — see PRESERVE in generate.py. */
+
+.md-grid {
+  max-width: 68rem;
+}
+
+/* Reference tables: the header stays visible while scrolling a long palette. */
+.md-typeset table:not([class]) thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Icon column and Level column stay narrow so Notes gets the room. */
+.md-typeset table:not([class]) td:first-child,
+.md-typeset table:not([class]) th:first-child {
+  width: 2.2rem;
+  text-align: center;
+}
+.md-typeset table:not([class]) td:nth-child(4),
+.md-typeset table:not([class]) th:nth-child(4) {
+  width: 6.5rem;
+  white-space: nowrap;
+}
+
+.md-typeset kbd {
+  font-size: 0.72rem;
+}
