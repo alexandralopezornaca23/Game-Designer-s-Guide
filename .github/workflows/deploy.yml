@@ -1,10 +1,8 @@
-# Builds the site from the spreadsheet and publishes it to GitHub Pages
-# on every push to main.
 name: Publish site
 
 on:
   push:
-    branches: [main]
+    branches: [main, master]
   workflow_dispatch:
 
 permissions:
@@ -26,8 +24,6 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      # Regenerate docs/ and mkdocs.yml from the spreadsheet, so what gets
-      # published is always exactly what GuiaGameDesigner.xlsx says.
       - run: python generate.py
       - run: mkdocs build
       - uses: actions/upload-pages-artifact@v3
