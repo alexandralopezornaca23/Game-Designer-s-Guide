@@ -1,0 +1,18 @@
+# Workspaces (top tabs)
+
+
+| | Action | Shortcut / Location | Level | Notes |
+|---|---|---|---|---|
+| - | **¿Qué es un Workspace?** | *Pestañas de arriba: Layout, Modeling, Sculpting...* | Basic | Cada pestaña de arriba es un Workspace: una disposición predefinida de paneles/editores (de los que aparecen en 'Selector de tipo de editor') pensada para una tarea concreta. Cambiar de Workspace NO cambia el archivo ni la escena, solo reorganiza qué editores ves y, en el caso de las que tienen Viewport 3D, qué Modo activa por defecto al entrar. |
+| 🗂️ | **Layout** | *Pestaña Layout* | Basic | Workspace por defecto al abrir Blender: 3D Viewport (Object Mode) + Outliner + Properties. Para organizar la escena en general (mover, añadir y agrupar objetos) antes de entrar en una tarea específica. |
+| 🧱 | **Modeling** | *Pestaña Modeling* | Basic | 3D Viewport que entra directamente en Edit Mode sobre la malla activa. Para modelar (ver categoría 'Barra T: Edit Mode (malla)'). |
+| 🖌️ | **Sculpting** | *Pestaña Sculpting* | Basic | 3D Viewport que entra directamente en Sculpt Mode, con el Brush Asset Shelf de pinceles visible abajo. Para esculpir (ver categoría 'Barra T: Sculpt Mode'). |
+| 🗺️ | **UV Editing** | *Pestaña UV Editing* | Intermediate | Divide la pantalla en Image Editor (izquierda, muestra el mapa UV) + 3D Viewport en Edit Mode (derecha). Para desenvolver y editar los UVs de la malla (ver categorías 'Barra T: UV Editing'). |
+| 🎨 | **Texture Paint** | *Pestaña Texture Paint* | Intermediate | Divide la pantalla en Image Editor (izquierda) + 3D Viewport en modo Texture Paint (derecha), ambos con su propia barra T de pinceles (ver categorías 'Barra T: Texture Paint...'). |
+| 💠 | **Shading** | *Pestaña Shading* | Intermediate | Divide la pantalla en Shader Editor (abajo, grande) + 3D Viewport arriba (normalmente en modo de sombreado Material Preview o Rendered, para ver el resultado en tiempo real). Para crear y ajustar los nodos de material/shader del objeto activo (ver 'Selector de tipo de editor: General > Shader Editor'). |
+| 🔑 | **Animation** | *Pestaña Animation* | Intermediate | 3D Viewport (Object Mode) arriba + Dope Sheet abajo + panel de Properties con la pestaña Object ya abierta a la derecha. Para animar: insertar keyframes y reorganizarlos en el Dope Sheet (ver 'Selector de tipo de editor: Animation > Dope Sheet'). |
+| 🎬 | **Rendering** | *Pestaña Rendering* | Intermediate | Image Editor mostrando el Render Result + panel de Properties con la pestaña Render ya abierta. Para lanzar renders (F12) y revisar el resultado sin salir de este layout (ver Menú superior > Render, ya documentado). |
+| 🎞️ | **Compositing** | *Pestaña Compositing* | Advanced | Compositor (grande, para montar el grafo de nodos de postproducción) + Image Editor con el Viewer Node arriba, para previsualizar el resultado de esos nodos en tiempo real (ver 'Selector de tipo de editor: General > Compositor'). |
+| 🧬 | **Geometry Nodes** | *Pestaña Geometry Nodes* | Advanced | Spreadsheet (arriba a la izquierda, con los datos de la geometría) + 3D Viewport (arriba derecha) + Geometry Node Editor (abajo, grande). Para crear geometría y efectos de forma procedural mediante nodos (ver 'Selector de tipo de editor: General > Geometry Node Editor' y 'Selector de tipo de editor: Data > Spreadsheet'). |
+| 🐍 | **Scripting** | *Pestaña Scripting* | Advanced | 3D Viewport + Text Editor (para escribir scripts) + Python Console (para probar comandos sueltos) + Outliner/Properties. Para programar en Python dentro de Blender (ver pestaña Python de esta guía y 'Selector de tipo de editor: Scripting'). |
+

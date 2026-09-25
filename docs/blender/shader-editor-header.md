@@ -1,0 +1,11 @@
+# Shader Editor > Header
+
+
+| | Action | Shortcut / Location | Level | Notes |
+|---|---|---|---|---|
+| 🧲 | **Snap: activar/desactivar** | *Icono de imán, cabecera del Shader Editor / Mayús+Tab (activar/desactivar)* | Intermediate | Mismo icono y mismo atajo (Mayús+Tab) que el Snapping ya documentado en 'Viewport 3D > Cabecera', pero aplicado aquí a los NODOS: al activarlo, mover un nodo lo ajusta a la rejilla del editor o lo alinea con otros nodos en vez de moverse libremente. Tooltip confirmado: 'Snap Node during transform'. |
+| ⌨️ | **Snap** | <kbd>Mayús</kbd> + <kbd>Tab</kbd> | Intermediate | Snap |
+| 🎚️ | **Slot: lista de materiales del objeto** | *Cabecera del Shader Editor, desplegable 'Slot'* | Basic | Lista los materiales (slots) asignados al objeto activo (uno en la captura: 'Material'); seleccionar uno distinto cambia qué red de nodos se edita. Los botones + y - añaden o quitan un slot de material; el campo de búsqueda y los iconos A-Z/enlace ordenan y filtran la lista igual que en otros selectores de Blender. |
+| 🔽 | **Slot > flecha desplegable: Copy Material / Copy Material to Selected / Paste Material / Remove Unused Slots / Remove All Materials** | *Cabecera del Shader Editor > Slot > flecha desplegable* | Intermediate | Copy Material copia el material activo al portapapeles. Copy Material to Selected lo pega directamente en todos los objetos seleccionados. Paste Material pega el material copiado en el slot activo. Remove Unused Slots elimina los slots de material que no tienen ningún polígono asignado. Remove All Materials vacía todos los slots de material del objeto. |
+| 🌐 | **Node Editor Overlays: Wire Colors / Reroute Auto Labels / Context Path / Annotations** | *Cabecera del Shader Editor, icono de esfera junto al de Overlays de material* | Intermediate | Los 4 activados por defecto (como en la captura). Wire Colors: colorea los cables según el tipo de dato que transportan (color/vector/valor/shader). Reroute Auto Labels: muestra una etiqueta automática sobre los nodos Reroute indicando qué dato pasa por ellos. Context Path: muestra la ruta de migas de pan (breadcrumb, ej. 'Cube > Material') en la cabecera al editar dentro de un grupo de nodos. Annotations: muestra en el editor los trazos dibujados con la herramienta Annotate. |
+

@@ -1,0 +1,10 @@
+# Preferences > Themes: 3D Viewport
+
+
+| | Action | Shortcut / Location | Level | Notes |
+|---|---|---|---|---|
+| 🧊 | **Rejilla y selección de objetos** | *Edit > Preferences > Themes > 3D Viewport* | Intermediate | Es la categoría de colores más larga de Themes, específica del Viewport 3D. Incluye: Grid y Major Grid Lines (líneas de la rejilla y sus líneas principales cada 10 unidades), Clipping Border, Wire/Wire Edit (color de malla en modo alambre), y los colores de selección por tipo de objeto: Object Selected, Active Object, Camera, Empty, Light, Speaker. |
+| 🧱 | **Edición de malla (vértices, aristas, caras)** | *Edit > Preferences > Themes > 3D Viewport* | Advanced | Colores de Edit Mode: Vertex/Vertex Select, Edge Selection/Edge Mode Selection, Face/Face Selection/Face Mode Selection, Face Orientation Back/Front (para ver qué caras están giradas al revés), y marcado de aristas especiales: Bevel, Seam, Sharp, Crease, Freestyle; más los textos de medidas Edge/Face Length/Angle/Area Text y los colores de Active Vertex/Edge/Face y de las normales (Face/Vertex/Custom Normal). |
+| - | **Otros elementos (huesos, cámara, gizmos, overlays)** | *Edit > Preferences > Themes > 3D Viewport* | Advanced | Resto de colores del Viewport: Vertex Group Unreferenced, Face Retopology, líneas NURBS, los estados de hueso en Pose Mode (Bone Pose Selected/Active/Solid/Locked Weight), Before/After Current Frame (onion skinning), Bundle Solid y Camera Path/Passepartout (tracking de cámara), Skin Root, View Overlay, Transform, el brillo de los ejes de la rejilla (Grid Axis Brightness) y el tamaño en píxeles de Edge/Vertex/Face Dot/Outline/Object Origin. También hay un grupo Gradient Colors (fondo del viewport) que Blender mantiene colapsado por defecto. |
+| - | **Theme Space (Title, Text, Header)** | *Edit > Preferences > Themes > 3D Viewport > Theme Space* | Basic | Sub-panel que se repite en TODOS los editores (no solo el Viewport): define el color del Title, Text y Text Highlight generales del editor, y el Header, Header Text y Header Text Highlight de su barra de cabecera superior. |
+
