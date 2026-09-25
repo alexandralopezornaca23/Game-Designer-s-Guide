@@ -4,8 +4,8 @@ site_name: Game Art Tools Reference
 site_description: >-
   Shortcuts, tools and interface reference for Blender, ZBrush, Maya, Krita,
   Unity, Unreal Engine and more — searchable across every program at once.
-site_author: Alex
-copyright: © Alex · Game Design & Development
+site_author: Alexandra López Ornaca
+copyright: © Alexandra López Ornaca · Game Design & Development artist
 
 theme:
   name: material
