@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Builds the documentation site from GuiaGameDesigner.xlsx.
+Builds the documentation site from GameDesignerGuide.xlsx.
 
 Single source of truth: the spreadsheet. This script reads every sheet, detects
 its columns from the header row (by name, not by position, so it keeps working
@@ -11,7 +11,7 @@ into the site.
 The site chrome is in English; the explanations in each entry stay in Spanish,
 which is how they were written.
 
-Usage:   python generate.py [path/to/GuiaGameDesigner.xlsx]
+Usage:   python generate.py [path/to/GameDesignerGuide.xlsx]
 """
 import os, re, sys, shutil, unicodedata, warnings
 from collections import OrderedDict
@@ -20,7 +20,7 @@ import openpyxl
 warnings.simplefilter("ignore")
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-XLSX = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "GuiaGameDesigner.xlsx")
+XLSX = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "GameDesignerGuide.xlsx")
 DOCS = os.path.join(ROOT, "docs")
 
 HEADER_ROW = 3
@@ -428,7 +428,7 @@ def main():
         "into these pages and a GitHub Action publishes them on every push.\n",
         "It is the same *docs-as-code* approach studios use to document tools and "
         "pipelines: one source of truth, everything else generated.\n",
-        "```\nGuiaGameDesigner.xlsx  ──►  generate.py  ──►  docs/*.md  ──►  mkdocs build  ──►  site/\n```\n",
+        "```\nGameDesignerGuide.xlsx  ──►  generate.py  ──►  docs/*.md  ──►  mkdocs build  ──►  site/\n```\n",
         "## Conventions\n",
         "- **Level** — Basic, Intermediate or Advanced, so you can tell everyday "
         "tools from once-a-month ones.\n"
