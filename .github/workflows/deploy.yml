@@ -25,7 +25,8 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - run: python generate.py
-      - run: mkdocs build
+      - run: mkdocs build -f mkdocs-en.yml
+      - run: mkdocs build -f mkdocs-es.yml
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
